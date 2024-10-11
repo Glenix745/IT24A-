@@ -45,4 +45,7 @@ class dataLogger{
         return this.loggedData.length;
       }
 
-  
+    displayLogCount() {
+        const logCount = this.countLogs();
+        this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
+    }
