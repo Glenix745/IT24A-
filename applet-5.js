@@ -52,4 +52,11 @@ class WeatherService extends WeatherApp {
                 async (position) => {
                     const { latitude, longitude } = position.coords;
                     const data = await this.getWeatherDataByCoordinates(latitude, longitude);
+                    if (data) {
+                        this.displayWeather(data);
+                        this.cityInput.value = '';
                     
+
+    
+    
+
