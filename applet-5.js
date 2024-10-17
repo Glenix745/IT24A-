@@ -55,7 +55,18 @@ class WeatherService extends WeatherApp {
                     if (data) {
                         this.displayWeather(data);
                         this.cityInput.value = '';
-                    
+                    } else {
+                        alert('Unable to retrieve weather data for your location.');
+                    }
+                },
+                () => {
+                    alert('Unable to retrieve your location. Please allow location access.');
+                }
+            );
+        } else {
+            alert('Geolocation is not supported by this browser.');
+        }
+    }
 
     
     
